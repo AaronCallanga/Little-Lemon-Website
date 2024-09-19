@@ -7,7 +7,6 @@ header {
     display: flex;
     gap: 100px;
     height: 80px;
-    background-color: green;
     align-items: center;
 }
 .nav {
@@ -35,6 +34,7 @@ header div {
     height: 50px;
 }
 
+
 @media (max-width: 900px) {
     .nav {
         display: none;
@@ -60,7 +60,7 @@ header div {
 
     .burger-menu {
         display: block;
-        color: white;
+        color:#333333;
         background-color: transparent;
         border: 0;
         font-size: 30px;
@@ -69,7 +69,7 @@ header div {
 
     .burger-menu.close {
         font-size: 30px;
-        color: white;
+        color: #333333;
         cursor: pointer;
     }
 
@@ -81,4 +81,215 @@ header div {
     .nav > ul > a:hover {
         color:yellow;
     }
+
+}
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    background-color: #495e57;
+    gap: 20px;
+    padding: 40px;
+}
+.hero-section section {
+    flex: 3;
+    padding: 40px
+}
+.hero-section section h1 {
+    font-size: 3rem;
+    color: #f4CE14;
+    margin-bottom: 10px;
+}
+.hero-section section h3 {
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 20px;
+}
+.hero-section section p {
+    color: #edefee;
+    margin-bottom: 20px;
+}
+.hero-section section button {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 18px;
+    background-color:#f4CE14;
+    color: #333333;
+    border-radius: 10px;
+    border: 0;
+}
+.hero-section section button:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
+}
+.hero-section aside {
+    flex: 1;
+}
+.hero-section img {
+    width: 350px;
+    height: 350px;
+    border-radius: 79% 21% 69% 31% / 34% 67% 33% 66%;
+}
+
+
+.highlights {
+    display: flex;
+    flex-direction: column;
+}
+.specials-btn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.specials-btn h1 {
+    color:#333333;
+    padding: 20px 60px;
+    flex: 4;
+}
+.specials-btn-container {
+    flex: 1;
+}
+.specials-btn-container button {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 18px;
+    background-color:#f4CE14;
+    color: #333333;
+    border-radius: 10px;
+    border: 0;
+    padding: 10px;
+    width: 45%;
+    padding: 10px 14px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #495e57;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+}
+.card div {
+    display: flex;
+    justify-content: space-between;
+}
+.card-description {
+    color: #edefee;
+    height: 110px;
+    padding: 20px;
+}
+.card button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 18px;
+    background-color:#f4CE14;
+    color: #333333;
+    border-radius: 10px;
+    border: 0;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 42%;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+}
+.card button img {
+    width: 40px;
+    height: 30px;
+}
+.card button:hover, .specials-btn-container button:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
+}
+.card img {
+    width: 100%;
+    height: 300px;
+}
+.card-title, .card-price {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+}
+.card-price {
+    color: #f4CE14;
+}
+
+
+
+.testimonial {
+    margin-top: 10vh;
+    background-color:#edefee;
+    color: #495e57;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+}
+.testimonial h1 {
+    color: #333333;
+    font-size: 2.8rem;
+}
+
+.testimonial-rating {
+    font-size: 1.4rem;
+    color: #333333;
+    font-weight: 800;
+}
+.testimonial-name {
+    font-size: 1.2rem;
+    color: #333333;
+    font-weight: 800;
+    margin-top: 6px;
+    padding: 2px 20px;
+}
+.testimonial-review {
+    font-weight: 500;
+}
+.testimonial-occupancy {
+    padding: 0px 20px;
+    font-weight: 500;
+}
+.testimonial-rating, .testimonial-review {
+    padding: 10px 20px;
+}
+.stars {
+    color:#f4CE14;
+}
+
+
+
+.testimonial-card-container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.testimonial-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    text-align: start;
+}
+.testimonial-card img {
+    width: 60%;
+    height: 300px;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
+}
+.testimonial-card div {
+    width: 300px;
 }
