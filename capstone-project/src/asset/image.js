@@ -8,6 +8,8 @@ import testimonial1 from './testimonial1.jpg'
 import testimonial2 from './testimonial2.jpg'
 import testimonial3 from './testimonial3.avif'
 import testimonial4 from './testimonial4.jpg'
+import adrian from './adrian.jpg'
+import mario from './mario.jpg'
 
 export {
     logo, 
@@ -20,4 +22,6 @@ export {
     testimonial2,
     testimonial3,
     testimonial4,
+    adrian,
+    mario
 }
