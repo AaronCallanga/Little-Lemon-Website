@@ -1,5 +1,6 @@
 import '../App.css'
 import { logo } from '../asset/image'
+import { Link } from 'react-router-dom'
 
 export function Footer() {
     return (
@@ -11,9 +12,9 @@ export function Footer() {
                 <p>Doormat Navigation</p>
                 <ul>
                     <li>Home</li>
-                    <li>About</li>
+                    <Link to="/"><li>About</li></Link>
                     <li>Menu</li>
-                    <li>Reservations</li>
+                    <Link to="/BookingForm"><li>Reservations</li></Link>
                     <li>Order online</li>
                     <li>Login</li>
                 </ul>
@@ -29,9 +30,9 @@ export function Footer() {
             <div>
                 <p>Social Media Links</p>
                 <ul>
-                    <li>Facebook</li>
-                    <li>Instagram</li>
-                    <li>Youtube</li>
+                    <a className='social-media-nav' href="https://www.facebook.com/"><li>Facebook</li></a>
+                    <a className='social-media-nav' href="https://www.instagram.com/"><li>Instagram</li></a>
+                    <a className='social-media-nav' href="https://www.youtube.com/"><li>Youtube</li></a>
                 </ul>
             </div>
         </footer>

@@ -1,22 +1,22 @@
 import './App.css';
-import { Header } from './component/Header'
-import { HeroSection } from './component/Hero-section';
-import { Highlights } from './component/Highlights';
-import { Testimonial } from './component/Testimonial';
-import { AboutUs } from './component/About-us';
+import { Header } from './component/Header';
 import { Footer } from './component/Footer';
+import { Home } from './pages/Home';
+import { BookingForm } from './pages/BookingForm';
+
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 
 function App() {
     return (
       <>
-        <Header />
-        <main>
-        <HeroSection />
-        <Highlights />
-        <Testimonial />
-        <AboutUs />
-        </main>
-        <Footer />
+        <Router>
+          <Header />
+          <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/BookingForm" element={<BookingForm/>}/>
+          </Routes>
+          <Footer />
+        </Router>
       </>
     );
 }

@@ -22,6 +22,12 @@ header {
 }
 .nav > ul > a {
     text-decoration: none;
+    list-style-type: none;
+    color: #495e57;
+    font-weight: 500;
+}
+.nav > ul > a:hover {
+    color: #f4CE14;
 }
 header div {
     flex:1;
@@ -44,7 +50,7 @@ header div {
         top: 80px;
         right: 0;
         width: 100%;
-        background-color: rgba(4, 184, 4, 0.9);
+        background-color:#f4cf14dc;
         z-index: 10;
         padding: 20px;
         box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
@@ -60,7 +66,7 @@ header div {
         background-color: transparent;
         border: 0;
         font-size: 30px;
-        margin-right: 20px;
+        padding: 20px;
     }
     .burger-menu.close {
         font-size: 30px;
@@ -68,7 +74,8 @@ header div {
         cursor: pointer;
     }
     .nav > ul > a {
-        color: white;
+        font-weight: 700;
+        color: #3e4140;
         font-size: 24px;
     }
     .nav > ul > a:hover {
@@ -76,13 +83,29 @@ header div {
     }
 
 }
+@media (max-width: 550px) {
+    header div {
+        margin-left: 3vh;
+        width: 50px;
+        height: 45px;
+    }
+    header {
+        display: flex;
+        gap: 0;
+        height: 80px;
+        align-items: center;
+    }
+    .logo {
+        width: 80%;
+    }
+}
+
 
 
 .hero-section {
     display: flex;
     align-items: center;
     background-color: #495e57;
-    gap: 20px;
     padding: 40px;
 }
 .hero-section section {
@@ -90,22 +113,23 @@ header div {
     padding: 40px
 }
 .hero-section section h1 {
-    font-size: 3rem;
+    font-size: 4.6rem;
     color: #f4CE14;
     margin-bottom: 10px;
 }
 .hero-section section h3 {
-    font-size: 1.6rem;
+    font-size: 2.6rem;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 .hero-section section p {
     color: #edefee;
-    margin-bottom: 20px;
+    font-size: 1.6rem;
+    margin-bottom: 40px;
 }
 .hero-section section button {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 10px 18px;
     background-color:#f4CE14;
     color: #333333;
@@ -113,14 +137,25 @@ header div {
 }
 
 .hero-section aside {
-    flex: 1;
+    flex: 2;
+    margin-right: 5vh;
 }
 .hero-section img {
-    width: 350px;
-    height: 350px;
+    width: 80%;
     border-radius: 79% 21% 69% 31% / 34% 67% 33% 66%;
 }
 
+
+@media (max-width: 700px) {
+    .hero-section img {
+        width: 120%;
+    }
+}
+@media (max-width: 550px) {
+    .hero-section img {
+        width: 150%;
+    }
+}
 
 
 .highlights {
@@ -149,7 +184,7 @@ header div {
     border-radius: 4px;
     border: 0;
     padding: 10px;
-    width: 45%;
+    width: auto;
     padding: 10px 14px;
 }
 
@@ -191,7 +226,6 @@ header div {
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 42%;
     padding: 8px 14px;
     margin-bottom: 20px;
 }
@@ -220,9 +254,18 @@ header div {
 }
 
 
-
-
-
+@media (max-width: 900px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 550px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 
 
@@ -300,7 +343,7 @@ header div {
 .carousel-btn-container button {
     padding: 10px 20px;
     width: 130px;
-    color: #1a1919;
+    color: #333333;
     background-color: #f4CE14;
     border: 0;
     border-radius: 4px;
@@ -358,7 +401,7 @@ header div {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
     .About-us-section {
         display: grid;
         grid-template-rows: 1fr aauto;
@@ -366,20 +409,20 @@ header div {
     }
     .about-us-img-container {
         margin: 0;
-        height: 350px;
+        height: 500px;
     }
     .about-us-img2 {
         box-shadow:  0 2px 40px rgba(0, 0, 0, 0.4);
-        width: 80%;
-        left: 140px;
+        width: 60%;
+        left: 180px;
         top: 0;
 
     }
     .about-us-img1 {
         box-shadow:  0 2px 40px rgba(0, 0, 0, 0.4);
-        width: 80%;
-        top: 190px;
-        left: 0;
+        width: 60%;
+        top: 270px;
+        left: 10px;
     }
 }
 
@@ -398,7 +441,7 @@ footer p {
     padding: 20px;
     color: #495e57;
 }
-footer ul > li{
+footer ul > li {
     padding: 3px 20px;
     text-decoration: none;
     list-style-type: none;
@@ -418,3 +461,16 @@ footer ul > li:hover {
    justify-content: center;
 }
 
+footer ul > a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #495e57;
+    font-weight: 500;
+}
+footer ul > a > li {
+    padding: 3px 20px;
+}
+footer ul > a:hover {
+    color: #f4CE14;
+    cursor: pointer;
+}
