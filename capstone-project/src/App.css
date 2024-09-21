@@ -34,12 +34,10 @@ header div {
     height: 50px;
 }
 
-
 @media (max-width: 900px) {
     .nav {
         display: none;
     }
-    
     .nav.is-open {
         display: block;
         position: absolute;
@@ -51,13 +49,11 @@ header div {
         padding: 20px;
         box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
     }
-
     .nav.is-open > ul {
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
-
     .burger-menu {
         display: block;
         color:#333333;
@@ -66,18 +62,15 @@ header div {
         font-size: 30px;
         margin-right: 20px;
     }
-
     .burger-menu.close {
         font-size: 30px;
         color: #333333;
         cursor: pointer;
     }
-
     .nav > ul > a {
         color: white;
         font-size: 24px;
     }
-
     .nav > ul > a:hover {
         color:yellow;
     }
@@ -116,13 +109,9 @@ header div {
     padding: 10px 18px;
     background-color:#f4CE14;
     color: #333333;
-    border-radius: 10px;
     border: 0;
 }
-.hero-section section button:hover {
-    cursor: pointer;
-    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
-}
+
 .hero-section aside {
     flex: 1;
 }
@@ -131,6 +120,7 @@ header div {
     height: 350px;
     border-radius: 79% 21% 69% 31% / 34% 67% 33% 66%;
 }
+
 
 
 .highlights {
@@ -156,7 +146,7 @@ header div {
     padding: 10px 18px;
     background-color:#f4CE14;
     color: #333333;
-    border-radius: 10px;
+    border-radius: 4px;
     border: 0;
     padding: 10px;
     width: 45%;
@@ -193,25 +183,27 @@ header div {
     gap: 10px;
     font-weight: bold;
     font-size: 1.2rem;
-    padding: auto;
+    padding: 10px 15px;
     background-color:#f4CE14;
     color: #333333;
-    border-radius: 10px;
+    border-radius: 4px;
     border: 0;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
     width: 42%;
-    padding: 10px 14px;
+    padding: 8px 14px;
     margin-bottom: 20px;
 }
 .card button img {
     width: 40px;
     height: 30px;
 }
-.card button:hover, .specials-btn-container button:hover {
+.card button:hover, .specials-btn-container button:hover, .hero-section section button:hover, .carousel-btn-container button:hover {
     cursor: pointer;
     box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
+    background-color: #1a1919;
+    color: #f4CE14;
 }
 .card img {
     width: 100%;
@@ -229,12 +221,16 @@ header div {
 
 
 
+
+
+
+
+
+
 .testimonial {
     margin-top: 10vh;
     background-color:#edefee;
     color: #495e57;
-    display: flex;
-    flex-direction: column;
     text-align: center;
     padding: 40px;
 }
@@ -247,6 +243,8 @@ header div {
     font-size: 1.4rem;
     color: #333333;
     font-weight: 800;
+    height: 20%;
+    width: 60%;
 }
 .testimonial-name {
     font-size: 1.2rem;
@@ -254,9 +252,13 @@ header div {
     font-weight: 800;
     margin-top: 6px;
     padding: 2px 20px;
+    height: 20%;
+    width: 60%;
 }
 .testimonial-review {
     font-weight: 500;
+    height: 20%;
+    width: 80%;
 }
 .testimonial-occupancy {
     padding: 0px 20px;
@@ -273,25 +275,37 @@ header div {
 
 .testimonial-card-container {
     padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 60px;
 }
 
 .testimonial-card {
-    display: flex;
-    justify-content: space-between;
+    display: flex;  
+    justify-content: center;
     gap: 20px;
     align-items: center;
     text-align: start;
 }
 .testimonial-card img {
-    width: 60%;
-    height: 300px;
+    width: 50%;
+    height: 50%;
     box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
 }
-.testimonial-card div {
-    width: 300px;
+.carousel-btn-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.carousel-btn-container button {
+    padding: 10px 20px;
+    width: 130px;
+    color: #1a1919;
+    background-color: #f4CE14;
+    border: 0;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 600    ;
 }
 
 
@@ -344,12 +358,40 @@ header div {
 }
 
 
+@media (max-width: 1024px) {
+    .About-us-section {
+        display: grid;
+        grid-template-rows: 1fr aauto;
+        height: auto;
+    }
+    .about-us-img-container {
+        margin: 0;
+        height: 350px;
+    }
+    .about-us-img2 {
+        box-shadow:  0 2px 40px rgba(0, 0, 0, 0.4);
+        width: 80%;
+        left: 140px;
+        top: 0;
+
+    }
+    .about-us-img1 {
+        box-shadow:  0 2px 40px rgba(0, 0, 0, 0.4);
+        width: 80%;
+        top: 190px;
+        left: 0;
+    }
+}
+
+
+
+
+
 footer {
     display: flex;
     justify-content: space-around;
-    font-size: 1.3rem;
-    padding: 40px;
-    padding-top: 20px;
+    font-size: 1rem;    
+    padding: 10px 0px;
 }
 footer p {
     font-weight: bold;
@@ -375,3 +417,4 @@ footer ul > li:hover {
    align-items: center;
    justify-content: center;
 }
+

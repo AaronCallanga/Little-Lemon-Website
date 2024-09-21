@@ -1,6 +1,6 @@
 import '../App.css'
 import { testimonial1, testimonial2, testimonial3, testimonial4 } from '../asset/image'
-
+import { useState } from 'react'
 
 function Card(props) {
     return (
@@ -16,6 +16,10 @@ function Card(props) {
     )
 }
 export function Testimonial() {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const nextBtn = () => { setCurrentImageIndex((currentImageIndex + 1) % testimonies.length); }
+    const prevBtn = () => { setCurrentImageIndex((currentImageIndex - 1 + testimonies.length) % testimonies.length); }
+    
 
     const testimonies = [
         {   
@@ -52,16 +56,18 @@ export function Testimonial() {
         <div className="testimonial">
             <h1>Testimonials</h1>
             <div className="testimonial-card-container">
-                {testimonies.map((item)=>(
-                    <Card 
-                        image = {item.image}
-                        rating = {item.rating}
-                        review = {item.review}
-                        name = {item.name}
-                        occupancy = {item.occupancy}
-                    />
-                ))}
+                <Card 
+                image = {testimonies[currentImageIndex].image}
+                name = {testimonies[currentImageIndex].name}
+                occupancy = {testimonies[currentImageIndex].occupancy}
+                rating = {testimonies[currentImageIndex].rating}
+                review = {testimonies[currentImageIndex].review}
+                />
             </div>
+            <div className='carousel-btn-container'>
+                <button onClick={nextBtn}>Next</button>
+                <button onClick={prevBtn}>Previous</button>
+            </div>  
         </div>
     )
 }

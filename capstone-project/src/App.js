@@ -7,21 +7,18 @@ import { AboutUs } from './component/About-us';
 import { Footer } from './component/Footer';
 
 function App() {
-
-  
-  return (
-    <>
-    <Header />
-    <main>
-    <HeroSection />
-    <Highlights />
-    <Testimonial />
-    <AboutUs />
-    </main>
-    <Footer />
-
-    </>
-  );
+    return (
+      <>
+        <Header />
+        <main>
+        <HeroSection />
+        <Highlights />
+        <Testimonial />
+        <AboutUs />
+        </main>
+        <Footer />
+      </>
+    );
 }
 
 export default App;

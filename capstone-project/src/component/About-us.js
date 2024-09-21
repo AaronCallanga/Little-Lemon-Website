@@ -1,9 +1,10 @@
+
 import '../App.css'
 import {adrian, mario} from '../asset/image'
 
 export function AboutUs() {
     return (
-        <div className="About-us-section">
+        <div className="About-us-section" >
             <div>
                 <h1>Little Lemon</h1>
                 <h3>Chicago</h3>

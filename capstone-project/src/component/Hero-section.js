@@ -1,9 +1,10 @@
+
 import '../App.css'
 import { heroImage } from '../asset/image'
 
 export function HeroSection() {
     return (
-        <div className="hero-section">
+        <div className="hero-section" >
             <section>
                 <h1>Little Lemon</h1>
                 <h3>Chicago</h3>
@@ -11,7 +12,7 @@ export function HeroSection() {
                 <button>Reserve a Table</button>
             </section>
             <aside>
-                <img src={heroImage} alt="picture of a food"></img>
+                <img src={heroImage} alt="a food"></img>
             </aside>
         </div>
     )
