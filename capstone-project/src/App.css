@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 header {
     display: flex;
@@ -233,7 +234,7 @@ header div {
     width: 40px;
     height: 30px;
 }
-.card button:hover, .specials-btn-container button:hover, .hero-section section button:hover, .carousel-btn-container button:hover {
+.card button:hover, .specials-btn-container button:hover, .hero-section section button:hover, .carousel-btn-container button:hover, .form-submit:hover {
     cursor: pointer;
     box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
     background-color: #1a1919;
@@ -280,6 +281,7 @@ header div {
 .testimonial h1 {
     color: #333333;
     font-size: 2.8rem;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .testimonial-rating {
@@ -348,7 +350,7 @@ header div {
     border: 0;
     border-radius: 4px;
     font-size: 1.2rem;
-    font-weight: 600    ;
+    font-weight: 600;
 }
 
 
@@ -473,4 +475,96 @@ footer ul > a > li {
 footer ul > a:hover {
     color: #f4CE14;
     cursor: pointer;
+}
+
+.form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #495e57;
+    flex-direction: column;
+    padding: 50px;
+    color: #edefee;
+}
+.form-section > h1 {
+    color: #f4CE14;
+    margin: 10px 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.8rem;
+    padding: 20px;
+    font-weight: 700;
+}
+
+.form-date, .form-time, .form-guests, .form-occasion, .form-notes, .form-submit {
+    padding: 10px 40px;
+    margin: 0 20px;
+    font-weight: 900;
+    background-color: #edefee;
+    color: #495e57;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.form-notes {
+    padding: 50px;
+}
+.form-date {
+    width: 345px;
+}
+.form-guests {
+    width: 290px;
+}
+.form-time {
+    width: 345px;
+}
+.form-occasion {
+    width: 305px;
+}
+.form-notes-container {
+    display: flex;
+    align-items: center;
+}
+.form-submit {
+    padding: 10px 20px;
+    width: 130px;
+    color: #333333;
+    background-color: #f4CE14;
+    border: 0;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    align-self: center;
+}
+.date-container, .time-container, .guests-container, .occasion-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bookings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 40px;
+}
+.bookings h1 {
+    color: #f4CE14;
+    font-family:'Times New Roman', Times, serif;
+}
+.form-bookings-container {
+    display: flex;
+    gap: 40px;
+}
+.form-bookings {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #edefee;
+    color: #495e57;
 }

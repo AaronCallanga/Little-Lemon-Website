@@ -21,7 +21,7 @@ export function Header() {
                         <Link to="/">Home</Link>
                         <a href="https://www.google.com/"><li>About</li></a>
                         <a href="https://www.google.com/"><li>Menu</li></a>
-                        <Link to="/BookingForm">Reservartions</Link>
+                        <Link to="/BookingForm">Reservations</Link>
                         <a href="https://www.google.com/"><li>Order online</li></a>
                         <a href="https://www.google.com/"><li>Login</li></a>
                     </ul>   

@@ -11,8 +11,8 @@ export function Footer() {
             <div>
                 <p>Doormat Navigation</p>
                 <ul>
-                    <li>Home</li>
-                    <Link to="/"><li>About</li></Link>
+                    <Link to="/"><li>Home</li></Link>
+                    <li>About</li>
                     <li>Menu</li>
                     <Link to="/BookingForm"><li>Reservations</li></Link>
                     <li>Order online</li>
