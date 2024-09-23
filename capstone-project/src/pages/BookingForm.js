@@ -1,5 +1,6 @@
 import '../App.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { fetchAPI } from '../component/api'
 
 
 
@@ -17,17 +18,18 @@ function Card(props) {
 
 
 export function BookingForm() {
-
+    
+    const [bookings, setBookings] = useState([])
+    const [availableTimes, setAvailableTimes] = useState([])
     const [formData, setFormData] = useState(
         {
             date: "",
             time: "",
             noOfGuests: 1,
             occasion: "",
-            notes: "😎"
+            notes: ""
         }
     )
-    const [bookings, setBookings] = useState([])
 
     const handleChange = (e) => {
         const {id, value} = e.target
@@ -36,6 +38,14 @@ export function BookingForm() {
             [id]: value
         }));
     }
+
+    useEffect(() => {
+        if (formData.date) {
+            const selectedDate = new Date(formData.date)
+            const availTimes = fetchAPI(selectedDate)
+            setAvailableTimes(availTimes)
+        }
+    },[formData.date]) 
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -49,7 +59,7 @@ export function BookingForm() {
                 time: "",
                 noOfGuests: 1,
                 occasion: "",
-                notes: "😎"
+                notes: ""
             })
         }
     }
@@ -59,7 +69,7 @@ export function BookingForm() {
             <h1>Reservations</h1>
             <form onSubmit={handleSubmit} className="form">
                 <div className="date-container">
-                    <label htmlFor="date">Choose a date</label>
+                    <label htmlFor="date">Date</label>
                     <input 
                     className='form-date'
                     type="date" 
@@ -68,19 +78,16 @@ export function BookingForm() {
                     onChange={handleChange} /> 
                 </div>
                 <div className="time-container">
-                <label htmlFor="time">Choose a time</label>
+                <label htmlFor="time">Time</label>
                     <select 
                     className='form-time'
                     id="time"
                     value={formData.time}
                     onChange={handleChange}>
                         <option>Time</option>
-                        <option>17:00</option>
-                        <option>18:00</option>  
-                        <option>19:00</option>
-                        <option>20:00</option>
-                        <option>21:00</option>
-                        <option>22:00</option>
+                        {availableTimes.map((time, index) => (
+                            <option key={index} value={time}>{time}</option>
+                        ))}
                     </select>
                 </div>
                 <div className="guests-container">
@@ -114,6 +121,8 @@ export function BookingForm() {
                     cols = "30"
                     id="notes" 
                     onChange={handleChange}
+                    value={formData.notes}
+                    placeholder="Enter a text here"
                     />
                 </div>
 

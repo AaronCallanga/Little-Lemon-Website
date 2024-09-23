@@ -490,14 +490,16 @@ footer ul > a:hover {
     color: #f4CE14;
     margin: 10px 5px;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
 }
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     font-size: 1.8rem;
     padding: 20px;
     font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .form-date, .form-time, .form-guests, .form-occasion, .form-notes, .form-submit {
@@ -510,25 +512,14 @@ footer ul > a:hover {
     border-radius: 5px;
     font-size: 1.2rem;
     text-align: center;
+    width: 100%;
+    margin: 5px 10px 15px 10px;
 }
 .form-notes {
     padding: 50px;
 }
-.form-date {
-    width: 345px;
-}
-.form-guests {
-    width: 290px;
-}
-.form-time {
-    width: 345px;
-}
-.form-occasion {
-    width: 305px;
-}
 .form-notes-container {
-    display: flex;
-    align-items: center;
+    grid-column: 1 / span 2;
 }
 .form-submit {
     padding: 10px 20px;
@@ -539,13 +530,17 @@ footer ul > a:hover {
     border-radius: 4px;
     font-size: 1.2rem;
     font-weight: 600;
-    align-self: center;
+    margin: 0 auto;
+    grid-column: 1 / span 2;
 }
-.date-container, .time-container, .guests-container, .occasion-container{
+.form-notes-container,.date-container, .time-container, .guests-container, .occasion-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    font-size: 1.2rem;
 }
+
 .bookings {
     display: flex;
     flex-direction: column;
@@ -553,13 +548,17 @@ footer ul > a:hover {
     align-items: center;
     margin-top: 100px;
     gap: 40px;
+    width: 100%;
 }
 .bookings h1 {
     color: #f4CE14;
     font-family:'Times New Roman', Times, serif;
+    font-size: 2.4rem;
 }
 .form-bookings-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
     gap: 40px;
 }
 .form-bookings {
