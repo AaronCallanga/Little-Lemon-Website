@@ -4,6 +4,7 @@ import { Testimonial } from '../component/Testimonial';
 import { AboutUs } from '../component/About-us';
 
 
+
 export function Home() {
     return (
       <>
@@ -11,7 +12,7 @@ export function Home() {
         <HeroSection />
         <Highlights />
         <Testimonial />
-        <AboutUs />
+        <AboutUs/>
         </main>
       </>
     );

@@ -1,6 +1,7 @@
 
-import '../App.css'
-import {adrian, mario} from '../asset/image'
+import '../App.css';
+import {adrian, mario} from '../asset/image';
+
 
 export function AboutUs() {
     return (

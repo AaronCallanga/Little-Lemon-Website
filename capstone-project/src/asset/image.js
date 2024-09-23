@@ -10,6 +10,16 @@ import testimonial3 from './testimonial3.jpg'
 import testimonial4 from './testimonial4.jpg'
 import adrian from './adrian.jpg'
 import mario from './mario.jpg'
+import gal1 from './gal1.jpg'
+import gal2 from './gal2.jpg'
+import gal3 from './gal3.jpeg'
+import gal4 from './gal4.jpeg'
+import gal5 from './gal5.jpeg'
+import gal6 from './gal6.jpeg'
+import gal7 from './gal7.jpeg'
+import gal8 from './gal8.jpeg'
+import gal9 from './gal9.jpeg'
+import gal10 from './gal10.jpeg'
 
 export {
     logo, 
@@ -23,5 +33,15 @@ export {
     testimonial3,
     testimonial4,
     adrian,
-    mario
+    mario,
+    gal1,
+    gal2,
+    gal3,
+    gal4,
+    gal5,
+    gal6,
+    gal7,
+    gal8,
+    gal9,
+    gal10
 }

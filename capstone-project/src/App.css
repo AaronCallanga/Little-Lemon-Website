@@ -234,7 +234,7 @@ header div {
     width: 40px;
     height: 30px;
 }
-.card button:hover, .specials-btn-container button:hover, .hero-section section button:hover, .carousel-btn-container button:hover, .form-submit:hover {
+.login-form button:hover, .card button:hover, .specials-btn-container button:hover, .hero-section section button:hover, .carousel-btn-container button:hover, .form-submit:hover {
     cursor: pointer;
     box-shadow: 0 2px 40px rgba(0, 0, 0, 0.4);
     background-color: #1a1919;
@@ -402,12 +402,30 @@ header div {
     box-shadow:  0 2px 40px rgba(0, 0, 0, 0.4);
 }
 
-
+@media (max-width: 1500px) {
+    .About-us-section {
+        height: auto;
+    }
+    .about-us-img-container {
+        margin: 0;
+        height: 500px;
+        margin-left: 50px;
+    }
+    .about-us-img2 {
+        width: 60%;
+        left: 180px;
+        top: 0;
+    }
+    .about-us-img1 {
+        width: 60%;
+        top: 270px;
+        left: 10px;
+    }
+}
 @media (max-width: 900px) {
     .About-us-section {
         display: grid;
-        grid-template-rows: 1fr aauto;
-        height: auto;
+        grid-template-rows: 1fr auto;
     }
     .about-us-img-container {
         margin: 0;
@@ -428,8 +446,39 @@ header div {
     }
 }
 
+@media (max-width:450px) {
+    .about-us-img-container {
+        height: 300px;
+    }
+    .about-us-img2 {
+        width: 80%;
+        left: 110px;
+        top: 0;
 
+    }
+    .about-us-img1 {
+        width: 80%;
+        top: 130px;
+        left: 5px;
+    }
+}
 
+@media (max-width:650px) {
+    .about-us-img-container {
+        height: 400px;
+    }
+    .about-us-img2 {
+        width: 70%;
+        left: 110px;
+        top: 0;
+
+    }
+    .about-us-img1 {
+        width: 70%;
+        top: 210px;
+        left: 5px;
+    }
+}
 
 
 footer {
@@ -566,4 +615,103 @@ footer ul > a:hover {
     border-radius: 5px;
     background-color: #edefee;
     color: #495e57;
+}
+
+.Menu-section {
+    padding: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #f4CE14;
+    font-size: 1.8rem;
+    background-color: #333333;
+}
+
+
+.Menu-img-container {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 240px;
+    gap: 1rem;
+    grid-auto-flow: dense;
+}
+.Menu-img-container > div {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Menu-img-container > div img {
+ width: 100%;
+ object-fit: cover;
+ height: 100%;
+ transition: transform 0.3s;
+ vertical-align: middle;
+ display: inline-block;
+}
+.Menu-img-container > div:hover img {
+    transform: scale(1.05);
+}
+.gal-1, .gal-7 {
+    grid-column: span 2 / auto ;
+}
+.gal-2, .gal-4, .gal-8 {
+    grid-row: span 2 / auto;
+}
+@media (max-width: 600px) {
+    .Menu-img-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .Menu-img-container > div img {
+        height:200px;
+       }
+}
+@media (max-width: 1600px) {
+    .gal-5 {
+        grid-row: span 2 / auto;
+    }
+    .gal-10 {
+        grid-row: span 2 / auto;
+        grid-column: span 2 / auto;
+    }
+}
+.Login-section {
+    height: 80vh;
+    padding: 50px;
+    text-align: center;
+    background-color: #edefee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-form {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.login-form input {
+    padding: 10px 15px;
+    width: 150px;
+}
+.login-form > div > label {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    margin: 10px;
+    width: 100px;
+    font-weight: 600;
+}
+.login-form button {
+    padding: 10px 15px;
+    width: 130px;
+    color: #333333;
+    background-color: #f4CE14;
+    border: 0;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
